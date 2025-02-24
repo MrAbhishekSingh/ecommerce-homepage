@@ -1,38 +1,94 @@
-.App {
-  text-align: center;
+.category-sidebar {
+  transition: transform 0.3s ease-in-out;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.hide {
+  transform: translateX(-100%);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background: white;
+  z-index: 1000;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.showSlider {
+  transform: translateX(0);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background: white;
+  z-index: 1000;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  padding: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Overlay for mobile */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
 }
 
-.App-link {
-  color: #61dafb;
+.bold-checkbox {
+  border: 1px solid black !important;
+  width: 18px;
+  height: 18px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Remove right border of input so it connects seamlessly */
+.custom-input-group {
+  border: 1px solid rgb(181, 181, 181);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.spareter {
+  border: 2px solid rgb(181, 181, 181);
+  height: 30px;
+  align-self: center;
+}
+
+.input-group-text {
+  background-color: white;
+  border: none
+}
+
+/* Ensure input and search icon maintain their top and bottom borders */
+.custom-input-group .form-control:focus {
+  border-color: inherit !important;
+  /* Keep the same border, remove focus effect */
+  box-shadow: none !important;
+  outline: none;
+  border: none;
+  /* Remove focus shadow */
+}
+
+.custom-input-group .form-control {
+  border-color: inherit !important;
+  /* Keep the same border, remove focus effect */
+  box-shadow: none !important;
+  outline: none;
+  border: none;
+  /* Remove focus shadow */
+}
+
+.badge {
+  background-color: rgb(246, 160, 182);
+  /* First badge - Red */
+}
+
+.val {
+  background-color: rgb(235, 91, 243);
+  top: 30px !important
+    /* Second badge - Blue */
 }
