@@ -58,7 +58,7 @@ const CategoryList = ({ setCategory }) => {
             <div className="input-group mb-4 custom-input-group">
                 <input
                     type="text"
-                    className="form-control"
+                    className="form-control p-2"
                     placeholder="Search here..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
@@ -71,18 +71,19 @@ const CategoryList = ({ setCategory }) => {
 
             {/* Select All Checkbox */}
             <h6>Categories</h6>
-            <div className="form-check">
+            <div className="form-check d-flex align-items-center ">
                 <input
                     type="checkbox"
-                    className="form-check-input bold-checkbox"
+                    className="form-check-input fs-6"
                     id="selectAll"
                     checked={selectedCategories.length === filteredCategories.length && filteredCategories.length > 0}
                     onChange={handleSelectAll}
                 />
-                <label className="form-check-label" htmlFor="selectAll">
+                <label className="form-check-label   py-1 ms-2 " htmlFor="selectAll" style={{ fontSize: '14px' }} >
                     Select All
                 </label>
             </div>
+
 
             {/* Category List with Checkboxes */}
             <div className="d-flex flex-column gap-2">
@@ -98,7 +99,7 @@ const CategoryList = ({ setCategory }) => {
                                 checked={selectedCategories.includes(category)}
                                 onChange={() => handleCategoryChange(category)}
                             />
-                            <label className="form-check-label" htmlFor={category}>
+                            <label className="form-check-label" htmlFor={category} style={{ fontSize: '15px' }}>
                                 {category}
                             </label>
                         </div>

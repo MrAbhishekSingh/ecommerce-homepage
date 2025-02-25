@@ -40,15 +40,22 @@
 }
 
 .bold-checkbox {
-  border: 1px solid black !important;
-  width: 18px;
-  height: 18px;
+  border: 1px solid rgb(165, 163, 163) !important;
+  width: 15px;
+  height: 15px;
+}
+
+.form-check {
+  display: block;
+  min-height: 1.5rem;
+  padding-left: 1.5em;
+  margin-bottom: 9px;
 }
 
 /* Remove right border of input so it connects seamlessly */
 .custom-input-group {
   border: 1px solid rgb(181, 181, 181);
-  border-radius: 6px;
+  border-radius: 1px;
   overflow: hidden;
 }
 
@@ -91,4 +98,12 @@
   background-color: rgb(235, 91, 243);
   top: 30px !important
     /* Second badge - Blue */
+}
+
+.custom-padding {
+  padding: 67px !important;
+}
+
+.formselected {
+  border-radius: 1px !important;
 }

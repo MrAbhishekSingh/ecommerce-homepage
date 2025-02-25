@@ -96,11 +96,11 @@ const ProductGrid = ({ search, category }) => {
     return (
         <div className="mt-3 px-2">
             {/* Controls: Pagination Dropdown, View Toggle & Showing Results */}
-            <div className="d-flex justify-content-between align-items-center mb-3">
-                <div className="d-flex align-items-center gap-3">
-                    <label>Show:</label>
+            <div className="d-flex justify-content-between align-items-center mb-4">
+                <div className="d-flex align-items-center gap-4">
+                    {/* <label>Show:</label> */}
                     <select
-                        className="form-select w-auto"
+                        className="form-select formselected w-auto fs-6 py-0 px-5"
                         value={itemsPerPage}
                         onChange={(e) => {
                             setItemsPerPage(parseInt(e.target.value));
@@ -114,7 +114,7 @@ const ProductGrid = ({ search, category }) => {
                     </select>
                 </div>
 
-                <span className="text-muted">
+                <span className="text-muted fs-6">
                     Showing {displayedProducts?.length} of {totalProducts} results
                 </span>
 
@@ -152,7 +152,7 @@ const ProductGrid = ({ search, category }) => {
 
                     : displayedProducts.map((product) => (
                         <div key={product.id} className={viewType === "list" ? "col-12 mb-3 border" : "col-md-4 mb-4"}>
-                            <div className={`h-100 position-relative ${viewType === "list" ? "d-flex flex-row p-2" : ""}`}>
+                            <div className={`h-100 position-relative  ${viewType === "list" ? "d-flex flex-row p-2" : ""}`}>
                                 <span className="badge position-absolute top-0 end-0 m-2">
                                     {product.rating.rate > 3.5 ? "New" : "Old"}
                                 </span>
@@ -163,12 +163,12 @@ const ProductGrid = ({ search, category }) => {
                                 {/* Product Image */}
                                 <img
                                     src={product.image}
-                                    className={`bg-light card-img-top ${viewType === "list" ? "w-25 p-2" : "p-3"}`}
+                                    className={`bg-light card-img-top custom-padding ${viewType === "list" ? "w-25  p-2" : "p-3"}`}
                                     alt={product.title}
-                                    style={{ height: viewType === "list" ? "100px" : "200px", objectFit: "contain" }}
+                                    style={{ height: viewType === "list" ? "100px" : "370px", objectFit: "contain" }}
                                 />
 
-                                <div className="card-body d-flex flex-column justify-content-center align-items-center gap-2">
+                                <div className="card-body d-flex flex-column justify-content-center align-items-center gap-2 mt-3">
                                     <h6 className="card-title text-center">{product.title}</h6>
 
                                     {/* Reviews */}
@@ -178,7 +178,7 @@ const ProductGrid = ({ search, category }) => {
                                     </div>
 
                                     {/* Price with Discount */}
-                                    <p className="mt-2">
+                                    <p className="mt-0">
                                         <span className="text-dark fw-bold">${(product.price * 0.9).toFixed(2)}</span>{" "}
                                         <span className="text-muted text-decoration-line-through">${product.price}</span>
                                     </p>

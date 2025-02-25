@@ -28,13 +28,13 @@ const Header = () => {
 
                 {/* Navigation Links & Icons - Now inside navbar-collapse */}
                 <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
-                    <ul className="navbar-nav">
-                        <li className="nav-item"><a className="nav-link active" href="/">Home</a></li>
-                        <li className="nav-item"><a className="nav-link" href="/shop">Shop</a></li>
+                    <ul className="navbar-nav gap-3 ">
+                        <li className="nav-item"><a className="nav-link active dropdown-toggle" href="/" >Home</a></li>
+                        <li className="nav-item"><a className="nav-link dropdown-toggle" href="/shop">Shop</a></li>
                         <li className="nav-item"><a className="nav-link" href="#">Collection</a></li>
-                        <li className="nav-item"><a className="nav-link" href="#">Pages</a></li>
+                        <li className="nav-item"><a className="nav-link dropdown-toggle" href="#">Pages </a></li>
                         <li className="nav-item"><a className="nav-link" href="#">Blog</a></li>
-                        <li className="nav-item"><a className="nav-link" href="/contact">Contact Us</a></li>
+                        <li className="nav-item"><a className="nav-link dropdown-toggle" href="/contact">Contact Us</a></li>
                     </ul>
 
                     {/* Icons Section (Inside Navbar Toggler on Mobile) */}
