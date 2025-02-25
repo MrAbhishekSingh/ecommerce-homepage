@@ -151,8 +151,8 @@ const ProductGrid = ({ search, category }) => {
                     ))
 
                     : displayedProducts.map((product) => (
-                        <div key={product.id} className={viewType === "list" ? "col-12 mb-3 border" : "col-md-4 mb-4"}>
-                            <div className={`h-100 position-relative  ${viewType === "list" ? "d-flex flex-row p-2" : ""}`}>
+                        <div key={product.id} className={viewType === "list" ? "col-12 mb-3 border" : viewType === "grid4" ? "col-md-4 mb-4" : "col-md-3 mb-4"}>
+                            <div className={` h-100 position-relative  ${viewType === "list" ? "d-flex flex-row p-2" : ""}`}>
                                 <span className="badge position-absolute top-0 end-0 m-2">
                                     {product.rating.rate > 3.5 ? "New" : "Old"}
                                 </span>
@@ -163,7 +163,7 @@ const ProductGrid = ({ search, category }) => {
                                 {/* Product Image */}
                                 <img
                                     src={product.image}
-                                    className={`bg-light card-img-top custom-padding ${viewType === "list" ? "w-25  p-2" : "p-3"}`}
+                                    className={`bg-light card-img-top  ${viewType === "list" ? "w-25  p-2" : "p-3"}`}
                                     alt={product.title}
                                     style={{ height: viewType === "list" ? "100px" : "370px", objectFit: "contain" }}
                                 />
